@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - 基本表单</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+
+    <style type="text/css">
+         .text-label::before{
+            content: '* ';
+            color: red;
+            font-size: 16px;
+        }
+        .sele_file{
+            user-select: none;
+            -ms-user-select:none; /* IE 9 */
+            -webkit-user-select:none;/* Safari and Chrome */
+            -o-user-select:none;
+            -moz-user-select:none;
+            border:1px solid #ddd;
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            color: #ddd;
+            font-weight: normal;
+            cursor:pointer;
+            margin-bottom: 20px;
+        }
+        .tel{
+            color: #999;
+        }
+        .tel span{
+            color:#6699ff;
+        }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <p class="tel"><span>工单管理</span> &gt; 新建工单</p>
+                    </div>
+                    <div class="ibox-content">
+                        <form method="get" class="form-horizontal">
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label text-label">工单标题</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <label class="col-sm-2 control-label text-label">业务类型</label>
+                                <div class="col-sm-3">
+                                    <select class="form-control m-b" name="account">
+                                        <option>请选择</option>
+                                        <option>物理架构</option>
+                                        <option>设备租用</option>
+                                        <option>设备托管</option>
+                                        <option>专线</option>
+                                        <option>ip地址</option>
+                                        <option>海外VPS</option>
+                                        <option>云服务器</option>
+                                        <option>云数据库</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">设备ID</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <label class="col-sm-2 control-label text-label">数据中心</label>
+                                <div class="col-sm-3">
+                                    <select class="form-control m-b" name="account">
+                                        <option>请选择</option>
+                                        <option>金海数据中心</option>
+                                        <option>呼兰数据中心</option>
+                                        <option>金桥数据中心</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label text-label">事件类型</label>
+                                <div class="col-sm-3">
+                                    <select class="form-control m-b" name="account">
+                                        <option>请选择</option>
+                                        <option>域名白名单</option>
+                                        <option>系统调试</option>
+                                        <option>设备支持</option>
+                                        <option>软件安装及卸载</option>
+                                        <option>软件故障检查及修复</option>
+                                        <option>其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label text-label">问题描述</label>
+                                <div class="col-sm-8" style="border:1px solid #ccc;padding-top:6px;margin-left: 16px;">
+                                    <textarea class="col-sm-12" rows="6" style="resize: none;font-size: 14px;border:none;outline: none;"></textarea>
+                                    <div class="col-sm-12">
+                                        <p>添加附件：可上传3个附件，每个附件大小不得超过2M，附件支持的格式有：'jpg'，'jpeg'，'png'。</p>
+                                        <div class="sele_file">+</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label text-label">联系人名称</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <label class="col-sm-1 control-label text-label">联系人手机</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <label class="col-sm-1 control-label text-label">联系人邮箱</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 50px;">
+                                <div class="col-sm-5"></div>
+                                <div class="col-sm-1">
+                                    <input type="button" class="btn btn-default col-sm-12" value="提交"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+    
+    
+
+</body>
+
+</html>

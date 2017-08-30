@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - FooTable</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <style type="text/css">
+        thead tr th,td{
+            text-align: center;
+        }
+
+        .alt_box{
+            width: 410px;
+            background-color: #fff;
+            border:1px solid #ccc;
+            border-radius: 5px;
+            position: fixed;
+            top: 30%;
+            left:35%;
+        }
+        .alt_box .title{
+            height: 46px;
+            line-height: 46px;
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+            color: #545454;
+            font-weight: bold;
+        }
+        .alt_box .funt_btn_group{
+            height: 56px;
+            padding-top: 12px;
+            text-align: center;
+        }
+        .alt_box .funt_btn_group input{
+            border:1px solid #ccc;
+            background-color: #fff;
+            color: #545454;
+            font-size: 14px;
+            margin: 0 10px;
+        }
+        .alt_box hr{
+            padding: 0;
+            margin: 0;
+        }
+
+        .evaluation{
+            display: none;
+        }
+        .evaluation li span{
+            display: inline-block;
+            width: 80px;
+            text-align: right;
+        }
+        .evaluation li textarea{
+            width: 192px;
+            height: 82px;
+            resize: none;
+        }
+        li{
+            margin-top: 16px;
+            list-style-type: none;
+        }
+        label{
+            font-weight: normal;
+        }
+
+        .evaluation 
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <div class="row">
+                                
+                                <button class="btn btn-default " type="button" style="margin-left: 16px;" onclick="javascript:window.location.href='repair_order_create.html';">新建工单</button>
+                                <label>&emsp;创建时间：</label>
+                                <input class="laydate-icon form-control layer-date" id="start" style="vertical-align: initial;"/>
+                                <label>至</label>
+                                <input class="laydate-icon form-control layer-date" id="end" style="vertical-align: initial;"/>
+                                <input type="text" class="form-control" placeholder="输入工单编号/标题" style="width:200px;display: inline-block;">
+
+                            </div>
+                            <div class="tabs-container" style="margin-top: 30px;">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> 工单</a>
+                                    </li>
+                                    <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">设备/人员进出</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="tab-1" class="tab-pane active">
+                                        <div class="panel-body">
+                                            <table class="footable table table-stripped" data-page-size="10" data-filter=#filter>
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <input type="checkbox"/>
+                                                            工单编号
+                                                        </th>
+                                                        <th>工单标题</th>
+                                                        <th>
+                                                            <select class="btn">
+                                                                <option value="0">状态</option>
+                                                                <option value="1">全部</option>
+                                                                <option value="2">待处理</option>
+                                                                <option value="3">处理中</option>
+                                                                <option value="3">已处理</option>
+                                                                <option value="3">已关闭</option>
+                                                                <option value="3">已评价</option>
+                                                            </select>
+                                                        </th>
+                                                        <th>
+                                                            <select class="btn">
+                                                                <option value="0">业务类型</option>
+                                                                <option value="1">全部</option>
+                                                                <option value="2">物理架构</option>
+                                                            </select>
+                                                        </th>
+                                                        <th>
+                                                            <select class="btn">
+                                                                <option value="0">事件类型</option>
+                                                                <option value="1">全部</option>
+                                                                <option value="2">域白名单</option>
+                                                                <option value="3">系统调试</option>
+                                                                <option value="3">其他</option>
+                                                                <option value="3">备案支持</option>
+                                                                <option value="3">软件安装及卸载</option>
+                                                                <option value="3">软件故障检查及修复</option>
+                                                            </select>
+                                                        </th>
+                                                        <th>数据/区域中心</th>
+                                                        <th>设备ID</th>
+                                                        <th>最后更新时间</th>
+                                                        <th>创建时间</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox"/>
+                                                            Trident
+                                                        </td>
+                                                        <td>Internet Explorer 4.0</td>
+                                                        <td><span>已处理</span>&emsp;<button data-toggle="button" class="btn btn-primary" type="button" onclick="tagsShow('.evaluation,.zbox');">评价</button></td>
+                                                        <td>X</td>
+                                                        <td>Trident</td>
+                                                        <td>Internet Explorer 4.0
+                                                        </td>
+                                                        <td>Win 95+</td>
+                                                        <td>4</td>
+                                                        <td>X</td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td colspan="10">
+                                                            <ul class="pagination pull-right"></ul>
+                                                        </td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="tab-2" class="tab-pane">
+                                        <div class="panel-body">
+                                            <table class="footable table table-stripped" data-page-size="10" data-filter=#filter>
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <input type="checkbox"/>
+                                                            工单编号
+                                                        </th>
+                                                        <th>工单标题</th>
+                                                        <th>
+                                                            <select class="btn">
+                                                                <option value="0">状态</option>
+                                                                <option value="1">全部</option>
+                                                                <option value="2">待处理</option>
+                                                                <option value="3">处理中</option>
+                                                                <option value="3">已处理</option>
+                                                                <option value="3">已关闭</option>
+                                                                <option value="3">已评价</option>
+                                                            </select>
+                                                        </th>
+                                                        <th>数据/区域中心</th>
+                                                        <th>设备ID</th>
+                                                        <th>最后更新时间</th>
+                                                        <th>创建时间</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox"/>
+                                                            Trident
+                                                        </td>
+                                                        <td>Internet Explorer 4.0</td>
+                                                        <td>Win 95+</td>
+                                                        <td>Internet Explorer 4.0
+                                                        </td>
+                                                        <td>Win 95+</td>
+                                                        <td>4</td>
+                                                        <td>X</td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td colspan="10">
+                                                            <ul class="pagination pull-right"></ul>
+                                                        </td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="zbox" style="background-color: rgba(0,0,0,0.2);width: 100%;height: 100%;position: fixed;top: 0px;left: 0px;display: none;"></div>
+
+    <div class="alt_box evaluation">
+        <p class="title">服务评价</p>
+        <hr/>
+        <div class="cont">
+            <ul>
+                <li>
+                    <span><i>*</i> 服务评价：</span>
+                    <input type="radio" name="level" id="vg"/><label for="vg">非常满意</label>
+                    <input type="radio" name="level" id="gn"/><label for="gn">基本满意</label>
+                    <input type="radio" name="level" id="ns"/><label for="ns">不满意</label>
+                </li>
+                <li>
+                    <span>建议或意见：</span>
+                    <textarea></textarea>
+                </li>
+            </ul>
+        </div>
+        <hr/>
+        <div class="funt_btn_group">
+            <input type="button" class="btn" value="提交"/>
+            <input type="button" class="btn" value="取消" onclick="tagsHide('.zbox,.evaluation');" />
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/footable/footable.all.min.js"></script>
+
+    <!-- layerDate plugin javascript -->
+    <script src="js/plugins/layer/laydate/laydate.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.footable').footable();
+            $(".footable-sort-indicator").remove();
+
+
+            //日期范围限制
+            var start = {
+                elem: '#start',
+                format: 'YYYY/MM/DD hh:mm:ss',
+                min: laydate.now(), //设定最小日期为当前日期
+                max: '2099-06-16 23:59:59', //最大日期
+                istime: true,
+                istoday: false,
+                choose: function (datas) {
+                    end.min = datas; //开始日选好后，重置结束日的最小日期
+                    end.start = datas //将结束日的初始值设定为开始日
+                }
+            };
+            var end = {
+                elem: '#end',
+                format: 'YYYY/MM/DD hh:mm:ss',
+                min: laydate.now(),
+                max: '2099-06-16 23:59:59',
+                istime: true,
+                istoday: false,
+                choose: function (datas) {
+                    start.max = datas; //结束日选好后，重置开始日的最大日期
+                }
+            };
+            laydate(start);
+            laydate(end);
+
+        });
+
+        function tagsHide(tag){
+            $(tag).hide(300);
+        }
+        function tagsShow(tag){
+            $(tag).show(300);
+        }
+    </script>
+
+</body>
+
+</html>

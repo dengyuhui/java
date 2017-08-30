@@ -1,0 +1,291 @@
+.btn-primary.btn-outline{
+    color: #23b7e5!important;
+}
+.btn-primary.btn-outline:hover{
+    color: #fff!important;
+}
+.d{
+            font-size: 12px;
+            color: #23b7e5;
+            padding:2px 10px;
+            background-color: #fff;
+            border:1px solid #23b7e5;
+        }
+        .tableTitle button{
+            font-size: 12px !important;
+            color: #545454;
+            margin-left: 30px !important;
+            height: 40px;
+        }
+        .tableTitle button:hover{
+            color: #23b7e5;
+            border-bottom: 1px solid #23b7e5 !important;
+        }
+        .tableTitleActive{
+            color: #23b7e5!important;
+            border-bottom: 1px solid #23b7e5 !important;
+        }
+        .itemTitle{
+            font-size: 14px;
+            font-weight: bold;
+            color:#545454;
+        }
+        .zz{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            display: none;
+        }
+
+        /*update phone number*/
+
+        .change-phone-box{
+            width: 505px;
+            height: 272px;
+            position: fixed;
+            top:20%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            display: none;
+        }
+        .change-phone-box .title{
+            width: 100%;
+            height:42px;
+            border-bottom: 1px solid #ccc;
+            line-height: 42px;
+        }
+        .change-phone-box .title span{
+            font-size: 14px;
+            margin-left: 20px;
+            color: #666;
+            font-weight: bold;
+        }
+        .change-phone-box .title .fa{
+            float: right;
+            line-height: 42px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .change-phone-box .cp-c-box{
+            width: 100%;
+            min-height: 150px;
+            border-bottom: 1px solid #ccc;
+        }
+        .change-phone-box .cp-c-box p{
+            font-size: 15px;
+            color: #999;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        .change-phone-box .cp-c-box p span{
+            color: red;
+        }
+        .change-phone-box .cp-c-box .cp-row-item{
+            width: 100%;
+            padding-left: 30px;
+            height: 25px;
+            margin-top: 20px;
+        }
+        .change-phone-box .cp-c-box .cp-row-item label{
+            width: 70px;
+            text-align: right;
+        }
+        .change-phone-box .cp-c-box .cp-row-item input[type="text"]{
+            height: 24px;
+            border:none;
+            border: 1px solid #ccc; 
+            border-radius: 3px;
+            padding-left: 5px;
+        }
+        .change-phone-box .cp-c-box .cp-row-item .getcode{
+            margin-left: 20px;
+            cursor:pointer;
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -webkit-user-select: none;
+        }
+        .change-phone-box .cp-c-box .cp-row-item label span.zd::before{
+            content: '*';
+            color: red;
+        }
+        .change-phone-box .cp-btn-box{
+            width: 208px;
+            margin: 10px auto;
+        }
+        .change-phone-box .cp-btn-box input{
+            width: 82px;
+            height: 36px;
+            border: none;
+            border:1px solid #ccc;
+            background-color: #dfdfdf;
+            border-radius: 3px;
+            color: #545454;
+            outline: none;
+            margin: 0 10px;
+
+            transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+        }
+        .change-phone-box .cp-btn-box input:active{
+            background-color: #eeeeee;
+        }
+        .change-phone-box .cp-btn-box input.ok{
+            background-color: #23b7e5;
+            border-color: #23b7e5;
+            color: #fff;
+        }
+
+
+        /*banding wechat*/
+        .band-wechat-box{
+            width: 505px;
+            height: 272px;
+            position: fixed;
+            top:20%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            display: none;
+        }
+        .band-wechat-box .title{
+            width: 100%;
+            height:42px;
+            border-bottom: 1px solid #ccc;
+            line-height: 42px;
+        }
+        .band-wechat-box .title span{
+            font-size: 14px;
+            margin-left: 20px;
+            color: #666;
+            font-weight: bold;
+        }
+        .band-wechat-box .title .fa{
+            float: right;
+            line-height: 42px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .band-wechat-box .bw-c-box{
+            width: 100%;
+            min-height: 150px;
+        }
+
+
+        /*update the password*/
+        .update-pwd-box{
+            width: 505px;
+            position: fixed;
+            top:20%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            display: none;
+        }
+        .update-pwd-box .title{
+            width: 100%;
+            height:42px;
+            border-bottom: 1px solid #ccc;
+            line-height: 42px;
+        }
+        .update-pwd-box .title span{
+            font-size: 14px;
+            margin-left: 20px;
+            color: #666;
+            font-weight: bold;
+        }
+        .update-pwd-box .title .fa{
+            float: right;
+            line-height: 42px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .update-pwd-box .up-c-box{
+            width: 100%;
+            min-height: 150px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+        .update-pwd-box .up-c-box p{
+            font-size: 15px;
+            color: #999;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        .update-pwd-box .up-c-box p span{
+            color: red;
+        }
+        .update-pwd-box .up-c-box .up-row-item{
+            width: 100%;
+            padding-left: 30px;
+            height: 25px;
+            margin-top: 20px;
+        }
+        .update-pwd-box .up-c-box .up-row-item label{
+            width: 88px;
+            text-align: right;
+        }
+        .update-pwd-box .up-c-box .up-row-item input[type="text"]{
+            width: 240px;
+            height: 24px;
+            border:none;
+            border: 1px solid #ccc; 
+            border-radius: 3px;
+            padding-left: 5px;
+        }
+        .update-pwd-box .up-c-box .up-row-item .getcode{
+            margin-left: 20px;
+            cursor:pointer;
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -webkit-user-select: none;
+        }
+        .update-pwd-box .up-c-box .up-row-item label span.zd::before{
+            content: '*';
+            color: red;
+        }
+        .update-pwd-box .up-btn-box{
+            width: 208px;
+            margin: 10px auto;
+        }
+        .update-pwd-box .up-btn-box input{
+            width: 82px;
+            height: 36px;
+            border: none;
+            border:1px solid #ccc;
+            background-color: #dfdfdf;
+            border-radius: 3px;
+            color: #545454;
+            outline: none;
+            margin: 0 10px;
+
+            transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+        }
+        .update-pwd-box .up-btn-box input:active{
+            background-color: #eeeeee;
+        }
+        .update-pwd-box .up-btn-box input.ok{
+            background-color: #23b7e5;
+            border-color: #23b7e5;
+            color: #fff;
+        }

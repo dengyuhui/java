@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<title>服务器托管</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	<link rel="stylesheet" type="text/css" href="css/idc-hosting.css"/>
+</head>
+<body>
+<div class="head">
+	<div class="h-box">
+		<div class="logo-box">
+			<img src="images/head_logo_sub.png"/>
+		</div>
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="index.html" class="trs">首页</a>
+				</li>
+				<li class="active">
+					<a href="idc.html" class="trs">IDC</a>
+				</li>
+				<li>
+					<a href="cloud-host.html" class="trs">云主机</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="trs">SSL</a>
+				</li>
+				<li>
+					<a href="m/main.html" class="trs">控制台</a>
+				</li>
+			</ul>
+			<div class="msg-box">
+				<a href="javascript:;" class="trs">登陆</a>
+				<span class="f-h">/</span>
+				<a href="javascript:;" class="trs">注册</a>
+			</div>
+
+			<img src="images/nav_line_sub.png" class="nav-line">
+		</div>
+	</div>
+</div>
+
+<div class="banner" style="background-image: url('images/hosting_banner_01.jpg');"></div>
+
+<div class="hosting">
+
+	<div class="tabs-box">
+		<ul>
+			<li class="tab-tle trs" data-num="0"  onclick="javascript:window.location.href='idc-rent.html';">
+				服务器租用
+			</li>
+			<li class="tab-tle trs active" data-num="1">
+				服务器托管
+			</li>
+		</ul>
+		<div class="clear"></div>
+		<ul>
+			<li class="tab-c active">
+				客用户自行采购服务器，安装好系统及相应软件；<br/>
+				由歆羨互联提供网络带宽，免费MRTG流量实时监控；<br/>
+				并对网络和设备进行7*24小时技术支持服务；<br/>
+				以实现有效降低维护费用和机房设备投入、线路租用等高额费用。
+			</li>
+		</ul>
+
+		<a href="javascript:;" class="kf-icon-qq">在线客服</a>
+	</div>
+
+	<div class="paramt-all-box">
+		<div class="paramt-sel-box">
+			
+			<div class="paramt-box">
+				<p class="title">核算您的服务器价格</p>
+				<p class="sub-title">为您提供适合您需求和预算的最佳计算解决方案</p>
+				<div class="items">
+
+					<div class="item">
+						<div class="tle">线路选择：</div>
+						<div class="btn-box btn-sel-box">
+							<input type="button" value="电信" class="active"/>
+							<input type="button" value="BGP"/>
+							<input type="button" value="双线"/>
+							<input type="button" value="香港"/>
+							<input type="button" value="移动"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">数据中心：</div>
+						<div class="btn-box btn-sel-box">
+							<input type="button" value="上海自贸区" class="active"/>
+							<input type="button" value="广州电信"/>
+							<input type="button" value="上海金海电信"/>
+							<input type="button" value="江苏无锡电信"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">服务器高度：</div>
+						<div class="btn-box btn-sel-box">
+							<input type="button" value="1U" class="active"/>
+							<input type="button" value="2U"/>
+							<input type="button" value="4U"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">公网IP：</div>
+						<div class="btn-box">
+							<input type="button" class="redu-btn" />
+							<input type="text" value="1" class="text-num" data-limit="1"/>
+							<input type="button" class="add-btn" />
+							<span>个IP地址</span>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">公网带宽：</div>
+						<div class="btn-box">
+
+							<div class="jdt-all-box">
+								<div class="jdt-box" id="jdt-box">
+									<div class="jdt-bg-color" id="jdt-bg-color"></div>
+									<div class="jdt-btn" id="jdt-btn"></div>
+								</div>
+							</div>
+							<input type="text" value="1" class="text-num input-num-kd" id="input-num-kd" style="float: left;margin-left: 20px;"  data-limit="100"/>
+							<span style="float: left;margin-left: 5px;position: relative;top: 10px;">Mbps</span>
+							<div class="clear"></div>
+							<p style="width: 490px;"><span>1Mbps</span><span style="float: right;">100Mbps</span></p>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">网络接口：</div>
+						<div class="btn-box btn-sel-box">
+							<input type="button" value="1个10/100/1000Mbps自适应网卡" class="active"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">操作系统：</div>
+						<div class="btn-box">
+							<select>
+								<option>Linux</option>
+								<option>Windows</option>
+							</select>
+							<select>
+								<option>CentOS 5.2</option>
+								<option>CentOS 5.3</option>
+								<option>Server 2003</option>
+								<option>Server 2010</option>
+								<option>Server 2012</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">DDOS防护：</div>
+						<div class="btn-box btn-sel-box">
+							<input type="button" value="无" class="active"/>
+							<input type="button" value="DDOS万兆防护"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">购买时长：</div>
+						<div class="btn-box btn-sel-box">
+							<input type="button" value="1个月" class="active"/>
+							<input type="button" value="1个季度"/>
+							<input type="button" value="6个月"/>
+							<input type="button" value="1年"/>
+							<input type="button" value="2年"/>
+							<input type="button" value="3年"/>
+							<input type="button" value="4年"/>
+							<input type="button" value="5年"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">购买数量：</div>
+						<div class="btn-box">
+							<input type="button" class="redu-btn" />
+							<input type="text" value="1" class="text-num" data-limit="10000"/>
+							<input type="button" class="add-btn" />
+							<span>台</span>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">是否开发票：</div>
+						<div class="btn-box">
+							<div id="check_css3">
+								<span><input type="radio" class="input_check" id="check1" name="isop-fp"><label for="check1"></label>&nbsp;是</span>
+								&emsp;
+								<span><input type="radio" class="input_check" checked="checked" id="check2" name="isop-fp"><label for="check2"></label>&nbsp;否</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">发票备注：</div>
+						<div class="btn-box">
+							<input type="text" placeholder="填写发票相关信息"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">联系电话：</div>
+						<div class="btn-box">
+							<input type="text"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">联系地址：</div>
+						<div class="btn-box">
+							<input type="text"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">联系姓名：</div>
+						<div class="btn-box">
+							<input type="text"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="tle">联系邮箱：</div>
+						<div class="btn-box">
+							<input type="text"/>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="paramt-list">
+				<p class="tle">费用预览</p>
+				<p class="item">
+					<span class="lab">服务器品牌：</span>
+					<span class="v">DELL</span>
+				</p>
+				<p class="item">
+					<span class="lab">产品型号：</span>
+					<span class="v">PowerEdge R430</span>
+				</p>
+				<p class="item">
+					<span class="lab">CPU：</span>
+					<span class="v">E3-1220 v3至强四核</span>
+				</p>
+				<p class="item">
+					<span class="lab">内存：</span>
+					<span class="v">8GB DDR3</span>
+				</p>
+				<p class="item">
+					<span class="lab">Raid卡：</span>
+					<span class="v">H310</span>
+				</p>
+				<p class="item">
+					<span class="lab">Raid阵列：</span>
+					<span class="v">无RAID</span>
+				</p>
+				<p class="item">
+					<span class="lab">电源：</span>
+					<span class="v">250W</span>
+				</p>
+				<p class="item">
+					<span class="lab">硬盘：</span>
+					<span class="v">300GB 10000转SAS个企业x2块</span>
+				</p>
+				<p class="item">
+					<span class="lab">路线选择：</span>
+					<span class="v">电信</span>
+				</p>
+				<p class="item">
+					<span class="lab">数据中心：</span>
+					<span class="v">上海自贸区</span>
+				</p>
+				<p class="item">
+					<span class="lab">服务器高度：</span>
+					<span class="v">1U</span>
+				</p>
+				<p class="item">
+					<span class="lab">公网IP：</span>
+					<span class="v">1</span>
+				</p>
+				<p class="item">
+					<span class="lab">公网宽带：</span>
+					<span class="v">1Mbps</span>
+				</p>
+				<p class="item">
+					<span class="lab">网络接口：</span>
+					<span class="v">1个10/100/1000Mbps自适应网卡</span>
+				</p>
+				<p class="item">
+					<span class="lab">操作系统：</span>
+					<span class="v">Linux CentOS 5.3</span>
+				</p>
+				<p class="item">
+					<span class="lab">DDOS防护：</span>
+					<span class="v">无</span>
+				</p>
+				<p class="item">
+					<span class="lab">购买时长：</span>
+					<span class="v">1个月</span>
+				</p>
+				<p class="item">
+					<span class="lab">购买数量：</span>
+					<span class="v">1台</span>
+				</p>
+				<p class="price">
+					<span class="tle">价格</span>
+					1402.16
+					<span class="dw">元</span>
+				</p>
+				<p class="submit-box">
+					<input type="button" value="订购服务器"/>
+				</p>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+	</div>
+
+</div>
+<div class="foot-box">
+	<div class="foot">
+		<div class="site-map">
+			<div class="l">
+				<p class="title">售前咨询</p>
+				<p class="c c-1">
+					IDC售前使用、合作的相关问题请直接<br/>
+					拨打我们的服务电话：021-12345678
+				</p>
+				<p class="c c-2">
+					点击下方QQ按钮，直接在线沟通，<br/>	
+					专业的客服人员为您服务
+				</p>
+				<p class="c c-3">
+					<a href="javascript:;" class="kf-icon-qq">在线客服</a>
+					<a href="javascript:;" class="kf-icon-qq">在线客服</a>
+					<a href="javascript:;" class="kf-icon-qq">在线客服</a>
+				</p>
+			</div>
+			<div class="r">
+				<p class="title">IDC售后支持</p>
+				<ul>
+					<li>
+						<p>上海呼兰数据中心呼兰路23919号</p>
+						<p>联系热线：2938293</p>
+					</li>
+					<li>
+						<p>上海南汇数据中心南汇路23919号</p>
+						<p>联系热线：2938293</p>
+					</li>
+					<li>
+						<p>上海张江数据中心张江路23919号</p>
+						<p>联系热线：2938293</p>
+					</li>
+					<li>
+						<p>香港数据中心香港路23919号</p>
+						<p>联系热线：2938293</p>
+					</li>
+				</ul>
+				<p class="c"><a href="javascript:;">值班QQ：12345678910</a></p>
+			</div>
+		</div>
+
+
+		<div class="line" style="margin-top: 0px;">
+			<img src="images/index_line_bg.png">
+		</div>
+
+	</div>
+
+	<div class="f-m-box">
+		<p class="show-work-time">工作日&nbsp;&nbsp;09:00—17:00</p>
+		<p class="site-nav"><a href="javascript:;">关于我们</a>|<a href="javascript:;">联系我们</a>|<a href="javascript:;">加入我们</a><span>TEL:021—1234567890</span></p>
+		<p class="icp-text">Copyright©2013-2016 nanjingdai All Rights Reserved 上海歆羨有限公司 版权所有    网站备案号：苏ICP备0000000</p>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/head.js"></script>
+<script type="text/javascript" src="js/host.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$(".items .item").append("<div class='clear'></div>");
+	})
+</script>
+</body>
+</html>

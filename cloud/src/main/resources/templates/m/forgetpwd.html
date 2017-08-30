@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title> 云度中国</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/css/ready.css" rel="stylesheet">
+
+    <!-- <style type="text/css">
+        html{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            width: 100%;
+            height:100%;
+            background-image: url('images/bgi.jpg');
+            background-size: 100% 100%;
+        }
+        .head{
+            width:100%;
+            height:80px;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+        }
+        .head .nav{
+            width:1200px;
+            height:80px;
+            margin: 0 auto;   
+        }
+        .head .nav .logoa{
+            line-height: 70px;
+            text-decoration:none;
+        }
+        .head .nav .backXinxianMain{
+            float: right;
+            line-height: 70px;
+            font-size: 18px;
+            font-weight: bold;
+            color:#545454;
+            text-decoration:none;
+        }
+        .registFormBox{
+            width: 350px;
+            min-height: 500px;
+            position: fixed;
+            top:22%;
+            right: 20%;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px #fff;
+        }
+        .registTitile{
+            width: 100%;
+            height: 50px;
+            border-bottom:1px solid #ccc;
+            border-radius: 4px 4px 0 0;
+            text-align: center;
+            line-height: 50px;
+            color: #999;
+            font-size: 20px;
+            background-color: #444;
+            position: relative;
+        }
+        .formBox{
+            width: 100%;
+            padding: 15px;
+        }
+        .registForm{
+            width: 100%;
+            border: 1px solid #dfdfdf;
+            box-shadow: 0px 3px 3px #ddd;
+            border-top: none;
+            padding-left: 15px;
+        }
+        .registForm .item{
+            width:100%;
+            margin-top: 10px;
+        }
+        .registForm label,.registForm button,.registForm input{
+            font-size: 12px;
+            color: #545454;
+            font-weight: 100;
+        }
+        .registForm label{
+            width:80px;
+            text-align: right;
+        }
+        .registForm button{
+            margin: 0px;
+            border:1px solid #ccc;
+            background-color: #fff;
+        }
+        .registForm input{
+            width:200px;
+            display: inline-block;
+            height: 25px;
+            border-radius: 2px;
+        }
+        .registForm button .verifiedImg{
+            width: 55px;
+            height: 30px;
+        }
+
+        .registBtn{
+            text-align: center;
+        }
+        .registBtn button{
+            width: 95%;
+            height: 40px;
+            background-color: #62a5f6;
+            color: #fff;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .registBtn button:active{
+            background-color: #297CBF;
+        }
+        i{
+            color: red;
+        }
+
+    </style> -->
+
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div class="head">
+        <div class="nav">
+            <a class="btn btn-link logoa" href="javascript:;">
+                <img src="images/logo.png"/>
+            </a>
+            <a class="btn btn-link backXinxianMain" href="javascript:;">
+                返回歆羡首页
+            </a>
+        </div>   
+    </div>
+    
+    <div class="registFormBox">
+        <div class="registTitile">
+            <div class="subT"></div>
+            <div class="titleText">找回密码</div>
+        </div>
+        <div class="formBox">
+            <p style="color: #999;">
+                <span style="color:red;">提示：</span>平台将发送一封邮件到您的注册邮箱进行密码重置，请注意查收。收到邮件点击邮件中的链接，重新设置您的密码。
+            </p>
+        </div>
+        <div class="formBox">
+            <div class="registForm">
+                <div class="item">
+                    <label>电子邮箱：</label>
+                    <input type="text" class="form-control" placeholder="请输入电子邮箱" stlye="border:none;"/>
+                </div>
+                
+                <div class="item registBtn">
+                    <button>找回密码</button>
+                </div>
+                <div class="item subBtnBox" style="padding-left: 10px;text-align: left;">
+                    <a href="login.html">直接登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $(".registFormBox").css('top','-500px').animate({top:'20%'},500);
+        })
+    </script>
+</body>
+
+</html>

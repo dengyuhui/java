@@ -1,0 +1,85 @@
+*{
+	font-family: 'Microsoft YaHei';
+}
+html,body{
+	width: 100%;
+}
+
+@charset "utf-8";
+body{padding:0;margin:0;font-size:12px;overflow-x:hidden;background:#fff repeat-x,width:100%;}
+a{color:#333;text-decoration:none}
+a:hover{color:#3366CC;text-decoration:none;}
+li,ul,form,h3{padding:0;margin:0;list-style-type:none}
+img{border:0}
+p,h1,h3,h2{margin:0;padding:0}
+
+.clearfix:after {content:".";clear:both;height:0;visibility:hidden;display:block;}
+
+.clearfix {display:inline-block;}
+
+/* Hides from IE-mac */
+*html .clearfix {height:1%;}
+
+.clearfix {display:block;}
+
+/* End hide from IE-mac */
+.cls{clear:both;padding:0!important;margin:0!important;height:0!important;line-height:0!important}
+.clear{clear: both;}
+
+.dn{
+	display: none;
+}
+
+button,input[type='button']{
+	border: 1px solid #ccc;
+	background-color: #fff;
+	color: #333;
+	border-radius: 3px;
+	padding: 3px 30px;
+	font-size: 14px;
+	outline: none;
+	cursor: pointer;
+}
+
+div.zz{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 29;
+	display: none;
+}
+
+div.zz0{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	display: none;
+	background-color: rgba(0,0,0,0.4);
+}
+.trs{
+	transition: all 0.7s;
+	-ms-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	-webkit-transition: all 0.7s;
+}
+
+a.kf-icon-qq{
+	display: inline-block;
+	width: 76px;
+	height: 32px;
+	border-radius: 16px;
+	background-color: #00abeb;
+	color: #fff;
+	padding-left: 30px;
+	line-height: 32px;
+
+	background-image: url('../images/qq_icon.png');
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}

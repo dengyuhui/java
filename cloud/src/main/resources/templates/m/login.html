@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title> 云度中国</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/css/ready.css" rel="stylesheet">
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div class="head">
+        <div class="nav">
+            <a class="btn btn-link logoa" href="javascript:;">
+                <img src="images/logo.png"/>
+            </a>
+            <a class="btn btn-link backXinxianMain" href="javascript:;">
+                返回歆羡首页
+            </a>
+        </div>   
+    </div>
+    
+    <div class="registFormBox">
+        <div class="registTitile">
+            <div class="subT"></div>
+            <div class="titleText">登录</div>
+        </div>
+        <div class="formBox">
+            <div class="registForm">
+                <div class="item">
+                    <label><i> * </i>电子邮箱：</label>
+                    <input type="text" class="form-control" placeholder="请输入电子邮箱"/>
+                </div>
+                <div class="item">
+                    <label><i> * </i>密码：</label>
+                    <input type="text" class="form-control" placeholder="密码至少8位，并包括大小写字母及数字"/>
+                </div>
+                <div class="item">
+                    <label><i> * </i>验证码：</label>
+                    <input type="text" class="form-control" placeholder="请输入验证码" style="width: 125px;"/>
+                    <button style="border:none;outline: none;"><img class="verifiedImg" src="images/logo.png"/></button>
+                    <a href="javascript:;" style="color:#333;font-size: 12px;">看不清？</label>
+                </div>
+                <div class="item registBtn">
+                    <a href="main.html"><button>登录</button></a>
+                </div>
+                <div class="item subBtnBox">
+                    <a href="regist.html">注册</a>
+                    |
+                    <a href="forgetpwd.html">忘记密码</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $(".registFormBox").css('top','-500px').animate({top:'20%'},500);
+        });
+    </script>
+</body>
+
+</html>

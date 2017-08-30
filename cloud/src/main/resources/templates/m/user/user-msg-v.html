@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> - FooTable</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../css/plugins/footable/footable.core.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <style type="text/css">
+        .user-msg-v .title-box{
+            margin-left: 30px;
+        }
+        .user-msg-v .title-box .title{
+            font-size: 18px;
+            color: #545454;
+        }
+        .user-msg-v .title-box .title .nx{
+            color: #7777ff;
+        }
+        .user-msg-v .title-box .title span{
+            cursor: pointer;
+        }
+        .user-msg-v .cbody{
+            margin-left: 43px;
+            padding-left: 40px;
+        }
+        .user-msg-v .cbody .tle{
+            margin-top: 20px;
+        }
+        .user-msg-v .cbody .tle span{
+            font-size: 17px;
+            color: #7777ff;
+            font-weight: bold;
+        }
+        .user-msg-v .cbody .tle-item.t1 span{
+            display: inline-block;
+            width: 94px;
+            text-align: right;
+        }
+        .user-msg-v .cbody .tle-item.t2 span{
+            display: inline-block;
+            width: 94px;
+        }
+        .user-msg-v .cbody .item{
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        .user-msg-v .cbody .item .img-btn-item{
+            display: inline-block;
+        }
+        .user-msg-v .cbody .input-box .item label.t{
+            width: 100px;
+            text-align: left;
+        }
+        .user-msg-v .cbody .input-box .item label.t::before{
+            content: '*';
+            color: red;
+            font-size: 20px;
+            position: relative;
+            top: 5px;
+        }
+        .user-msg-v .cbody select{
+            width: 100px;
+            height: 30px;
+            border: none;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            color: #545454;
+            font-size: 14px;
+        }
+        .user-msg-v  input[type='text']{
+            width: 200px;
+            height: 30px;
+            border-radius: 3px;
+            padding-left: 3px;
+            border: none;
+            border: 1px solid #cccccc;
+            color: #545454; 
+            font-size: 14px;
+        }
+        .user-msg-v .cbody .input-box label.r{
+            font-weight: 100;
+            color: #545454;
+            margin-left: 4px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .user-msg-v .cbody .input-box .item .img-btn-item{
+            width: 60px; 
+        }
+        .user-msg-v .cbody .input-box .item .img-btn-item .img-ul-box-btn{
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 14px;
+            padding-top: 4px;
+            color: #ccc;
+            cursor: pointer;
+
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -webkit-user-select: none;
+        }
+        .user-msg-v .cbody .input-box .item .img-btn-item p{
+            text-align: center;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .user-msg-v .cbody .yq{
+            background-color: #f0f0f0;
+            line-height: 40px;
+            border-radius: 3px;
+            padding-left: 10px;
+            color: #333;
+        }
+        .getcode-btn{
+            position: relative;
+            top: -2px;
+            left: 10px;
+        }
+        .ts{
+            font-size: 14px;
+            color: #999;
+        }
+        .submit-btn{
+            width: 168px;
+            height: 48px;
+            margin: 30px 0;
+
+        }
+        input[type='file']{
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="col-sm-12 wrapper wrapper-content animated user-msg-v">
+        <div class="col-sm-11 title-box">
+            <p class="title"><span class="nx" onclick="javascript:window.location.href='user-msg.html';">用户信息&emsp;&gt;&emsp;</span><span>用户认证</span></p>    
+        </div>
+        <div class="col-sm-11 ibox cbody">
+
+            <p class="tle"><span>账号信息</span></p>
+            <p class="tle-item t1"><span>当前登录账号：</span>12345679810@qq.com</p>
+            <p class="tle-item t1"><span>认证状态：</span></p>
+            <p class="tle-item t1"><span>用户身份：</span>
+                <select>
+                    <option>企业用户</option>
+                    <option>个人用户</option>
+                </select>
+            </p>
+            
+            <p class="tle"><span>认证内容</span></p>
+            <p class="yq">要求：手持身份证/护照，将证件的人像面对镜头，确保能够清晰的看到您本人人像和身份证/护照上的全部信息。</p>
+            <div class="col-sm-12 input-box">
+                <div class="item col-sm-4"><label class="t">联系人姓名：</label><input type="text" placeholder="用户名"/></div>
+                <div class="item col-sm-4"><label class="t">联系人邮箱：</label><input type="text" placeholder="123456798@qq.com"/></div>
+                <div class="item col-sm-4"><label class="t">联系地址：</label><input type="text" placeholder=""/></div>
+                <div class="item col-sm-4">
+                    <label class="t">证件类型：</label>
+                    <input type="radio" id="sfz" name="vtype" checked="checked" /><label for="sfz" class="r">身份证</label>
+                    <input type="radio" id="hz" name="vtype"/><label for="hz" class="r">护照</label>
+                </div>
+                <div class="item col-sm-4"><label class="t">证件号码：</label><input type="text" placeholder=""/></div>
+                <div class="item col-sm-4">
+                    <label class="t" style="position: relative;top:-20px;">证件照片：</label>
+                    <div class="img-btn-item">
+                        <label class="img-ul-box-btn" for="upfile1">+</label>
+                        <p>证件正面</p>
+                        <input type="file" accept=".jpg,.png,.jpeg,.JPG,.JPEG,.PNG" id="upfile1" />
+                    </div>
+                    <div class="img-btn-item">
+                        <label class="img-ul-box-btn" for="upfile2">+</label>
+                        <p>证件反面</p>
+                        <input type="file" accept=".jpg,.png,.jpeg,.JPG,.JPEG,.PNG" id="upfile2" />
+                    </div>
+                    <div class="img-btn-item">
+                        <label class="img-ul-box-btn" for="upfile3">+</label>
+                        <p>手持证件照</p>
+                        <input type="file" accept=".jpg,.png,.jpeg,.JPG,.JPEG,.PNG" id="upfile3"/>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="tle"><span>认证手机信息</span></p>
+            <div class="tle-item t2"><span>手机号码：</span><input type="text" value="86-12345678910"> <button class="btn btn-default getcode-btn">获取验证码</button></div>
+            <p class="tle-item t2 ts"><span></span>非中国大陆号码请输入“区号-手机号”</p>
+            <div class="tle-item t2"><span>验证码：</span><input type="text"></div>
+            <button class="btn btn-primary btn-yz submit-btn">立即验证</button>
+        </div>
+
+    </div>
+    <!-- 全局js -->
+    <script src="../js/jquery.min.js?v=2.1.4"></script>
+    <script src="../js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../js/plugins/footable/footable.all.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>新建云服务器</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../css/plugins/footable/footable.core.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+
+    <style type="text/css">
+        body{
+            background-color: #dfdfdf;
+        }
+        .msgBox{
+            background-color: #fff;
+            width: 95%;
+            margin-left: 5%;
+            padding: 20px 0;
+        }
+        .row{
+            margin: 20px 0 10px 30px;
+        }
+        .row button.btn-link{
+            width: 150px;
+            text-align:right;
+        }
+        .f-b{
+            color: blue;
+        }
+        .as-tle-r{
+            color: red;
+        }
+        .as-table table{
+            background-color: #efefef;
+        }
+        .as-table table td{
+            width: 100px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        input[type="text"],input[type="password"]{
+            width: 200px;
+            border: 1px solid #ccc;
+            height: 25px;
+            border-radius: 3px;
+            padding: 0 10px;
+        }
+        .buy_btn1{
+            margin-left: 150px;
+        }
+        .buy_btn2{
+            margin-left: 150px;
+            display: none;
+        }
+        .jdt_cont{
+            margin-right: 6px;
+            cursor: pointer;
+        }
+        .cont_y{
+            margin-left: 2px;
+        }
+
+
+        .alt_box{
+            width: 410px;
+            background-color: #fff;
+            border:1px solid #ccc;
+            border-radius: 5px;
+            position: fixed;
+            top: 30%;
+            left:35%;
+        }
+        .alt_box .title{
+            height: 46px;
+            line-height: 46px;
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+            color: #545454;
+            font-weight: bold;
+        }
+        .alt_box .funt_btn_group{
+            height: 56px;
+            padding-top: 12px;
+            text-align: center;
+        }
+        .alt_box .funt_btn_group input{
+            border:1px solid #ccc;
+            background-color: #fff;
+            color: #545454;
+            font-size: 14px;
+            margin: 0 10px;
+        }
+        .alt_box hr{
+            padding: 0;
+            margin: 0;
+        }
+
+        
+        .create_sdn_net .cont{
+            height: 104px;
+            width: 270px;
+            margin: 0 auto;
+            line-height: 104px;
+        }
+
+        .create_cloud_disk{
+            width: 500px;
+        }
+        .create_cloud_disk .cont{
+            height: 182px;
+        }
+        .create_cloud_disk .cont .prompt{
+            height: 40px;
+            line-height: 40px;
+            font-size: 13px;
+            color: #545454;
+            padding-left: 20px;
+            font-weight: 400;
+        }
+        .create_cloud_disk .cont .prompt span{
+            color: red;
+        }
+        .create_cloud_disk .cont ul li{
+            list-style-type: none;
+            margin-top: 15px;
+        }
+        .create_cloud_disk .cont ul li span{
+            display: inline-block;
+            width: 110px;
+            text-align: right;
+        }
+        .create_sdn_net{
+            display: none;
+        }
+
+
+    </style>
+
+</head>
+
+<body class="gray-bg">
+    <div class="msgBox">
+
+        <div class="row">
+            <button class="btn btn-link">请选择区域：</button>
+            <div class="btn-group as as-area">
+                <button class="btn btn-info" data="0">华东一区（无锡）</button>
+                <button class="btn btn-default" data="0">华东二区（上海）</button>
+                <button class="btn btn-default" data="0">亚太一区（香港）</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <button class="btn btn-link">镜像类型：</button>
+            <div class="btn-group as as-type">
+                <button class="btn btn-info" data="0">常用</button>
+                <button class="btn btn-default" data="0">系统</button>
+                <button class="btn btn-default" data="0">共享</button>
+                <button class="btn btn-default" data="0">自由</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">CPU：</button>
+            <div class="btn-group as as-area">
+                <button class="btn btn-info" data="0">1核</button>
+                <button class="btn btn-default" data="0">2核</button>
+                <button class="btn btn-default" data="0">4核</button>
+                <button class="btn btn-default" data="0">8核</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">内存：</button>
+            <div class="btn-group as as-area">
+                
+                <button class="btn btn-info" data="0">1G</button>
+                <button class="btn btn-default" data="0">2G</button>
+                <button class="btn btn-default" data="0">4G</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">系统盘：</button>
+            <span>20G</span>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">硬盘：</button>
+            <a href="javascript:tagsShow('.zbox,.create_cloud_disk');" >点击创建</a><span>新数据盘</span>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">网络选择：</button>
+            <div class="btn-group as as-area">    
+                <button class="btn btn-info" data="0">公网</button>
+                <button class="btn btn-default" data="0">内网</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link"></button>
+            <div class="btn-group as as-table">
+                <p>
+                    <span class="as-tle-r">提示：</span>1.公网IP地址通过NAT映射；<br/>
+                    &emsp;&emsp;&emsp;2.服务器自动分配的10.x.x.x段IP地址为内网映射IP地址，可能会变动，请不要用于业务访问。
+                </p>
+                <table>
+                    <tr><td>IP</td><td>宽带</td></tr>
+                    <tr><td class="f-b">43.254.54.37</td><td class="f-b">1MBPS</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">云防火墙：</button>
+            <div class="btn-group as as-area">
+                <select class="form-control">
+                    <option>默认防火墙</option>
+                    <option>默认防火墙</option>
+                    <option>默认防火墙</option>
+                    <option>默认防火墙</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">加入公有网络：</button>
+            <div class="btn-group as as-area">
+                <span>公有网络</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">加入已有SDN网络：</button>
+            <div class="btn-group as as-area">
+                <input type="checkbox"/>内网
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">云服务器名称：</button>
+            <div class="btn-group as as-area">
+                <input type="text"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">用户名：</button>
+            <div class="btn-group as as-area">
+                <input type="text" class="user_name" />
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">密码：</button>
+            <div class="btn-group as as-area">
+                <input type="password"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">购买时长：</button>
+            <div class="btn-group" style="width:500px;position: relative;">
+                <div class="progress" style="margin-bottom: 0;border:1px solid #1cddff;">
+                    <div style="width: 4%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="35" role="progressbar" class="progress-bar progress-bar-success jdt_div">
+                        <span class="sr-only">35% Complete (success)</span>
+                    </div>
+                </div>
+                <div class="jdt_btn" style="width: 10px;height: 30px;background-color: #1c84c6;position: absolute;top:-5px;left: 3%;cursor: pointer;"></div>
+                <p>
+                    <span class="cont_m jdt_cont" data="4">1个月</span>
+                    <span class="cont_m jdt_cont" data="12">2个月</span>
+                    <span class="cont_m jdt_cont" data="20">3个月</span>
+                    <span class="cont_m jdt_cont" data="28">4个月</span>
+                    <span class="cont_m jdt_cont" data="37">5个月</span>
+                    <span class="cont_m jdt_cont" data="46">6个月</span>
+                    <span class="cont_m jdt_cont" data="54">7个月</span>
+                    <span class="cont_m jdt_cont" data="63">8个月</span>
+                    <span class="cont_m jdt_cont" data="72">9个月</span>
+                    <span class="cont_m jdt_cont" data="81">10个月</span>
+                    <span class="cont_y jdt_cont" data="90">1年</span>
+                    <span class="cont_y jdt_cont" data="96">2年</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link">购买数量：</button>
+            <div class="btn-group">
+                <button class="btn btn-info" data="0">—</button>
+                <input type="text" class="btn" style="width:50px;height: 30px;" value="1">
+                <button class="btn btn-info" data="0">+</button>
+            </div>
+            <span>台&emsp;一次最多只能创建10台云服务器</span>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-link"></button>
+            <div class="btn-group">
+                <p style="font-size: 16px;color: red;">
+                   &#65509; <span style="font-size: 28px;">29712</span> / 月
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <button type="button" class="btn btn-w-m btn-primary buy_btn1" onclick="javascript:;" style="background-color: #dfdfdf;border:1px solid #dfdfdf;color: #999!important;cursor: not-allowed;">立即购买</button>
+            <button type="button" class="btn btn-w-m btn-primary buy_btn2" onclick="javascript:alert('购买成功！');">立即购买</button>
+        </div>
+
+            
+    </div>
+    
+    <div class="zbox" style="background-color: rgba(0,0,0,0.2);width: 100%;height: 100%;position: fixed;top: 0px;left: 0px;"></div>
+
+    <div class="alt_box create_sdn_net">
+        <p class="title">新建 SDN 网络</p>
+        <hr/>
+        <div class="cont">
+            <span>网络名称：</span><input type="text"/>
+        </div>
+        <hr/>
+        <div class="funt_btn_group">
+            <input type="button" class="btn" value="提交"/>
+            <input type="button" class="btn" value="取消" onclick="tagsHide('.zbox,.create_sdn_net');" />
+        </div>
+    </div>
+
+    <div class="alt_box create_cloud_disk">
+        <p class="title">新建云硬盘</p>
+        <hr/>
+        <div class="cont">
+            <p class="prompt"><span>提示：</span>创建云硬盘后，需要进入云服务器进行分区才能使用</p>
+            <ul>
+                <li><span><i style="color: red;">*</i> 云硬盘名称：</span><input type="text"/></li>
+                <li><span>类型：</span><input type="radio" name="type" id="performance" value="1" checked="checked"><label for="performance">性能型</label> <input type="radio" name="type" id="capacity" value="2"><label for="capacity">容量型</label></li>
+                <li><span>容量：</span><input type="text" style="width: 50px;" value="20">&nbsp;GB</li>
+            </ul>
+        </div>
+        <hr/>
+        <div class="funt_btn_group">
+            <input type="button" class="btn" value="提交"/>
+            <input type="button" class="btn" value="取消" onclick="tagsHide('.zbox,.create_cloud_disk');" />
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="../js/jquery.min.js?v=2.1.4"></script>
+    <script src="../js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../js/plugins/footable/footable.all.min.js"></script>
+    <script src="../js/content.js?v=1.0.0"></script>
+    <script>
+        $(document).ready(function() {
+            $('.footable').footable();
+            $(".footable-sort-indicator").remove();
+            //表单  选择区
+            var cs = ".as-area button,.as-type button";
+            $(cs).click(function(){
+                $(this).removeClass("btn-default").addClass("btn-info").attr("data","1").siblings("button.btn-info").removeClass("btn-info").addClass("btn-default").attr("data","0");
+            });
+
+            var move = 0;
+            $(".jdt_btn").mousedown(function(){
+                move = 1;
+            });
+            $("body").mouseup(function(){
+                move = 0;
+            });
+            $(".progress").mousemove(function(){
+                var x = event.x;
+                if(move==1){
+                    x -= 270;
+                    x += "px";
+                    $(".jdt_btn").css({"left":x});
+                    setWdith(x);
+                }
+            });
+            $(".jdt_cont").click(function(){
+                var data = $(this).attr("data");
+                var s1 = data -1;
+                data += "%";
+                s1 += "%";
+                setWdith(data);
+                setJdtBtn(s1);
+            });
+            function setWdith(w){
+                $(".progress .jdt_div").width(w);
+            }
+            function setJdtBtn(left){
+                $(".jdt_btn").stop().animate({"left":left},400,null);
+            }
+        });
+
+        function tagsHide(tag){
+            $(tag).hide(300);
+        }
+        function tagsShow(tag){
+            $(tag).show(300);
+        }
+    </script>
+
+</body>
+
+</html>

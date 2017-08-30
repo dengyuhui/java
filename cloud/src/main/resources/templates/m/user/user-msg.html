@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - FooTable</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../css/plugins/footable/footable.core.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/user/usermsg.css">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <div class="row">
+                                <span>&emsp;&emsp;&emsp;当前登录账号：</span>
+                                <span>1234567891@qq.com</span>
+                                <span>状态：已认证</span>
+                                <button class="btn d">查看认证</button>
+                                <button class="btn d" onclick="showBox('.update-pwd-box')">修改密码</button>
+                                <hr/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2" style="margin-left:30px;">
+                                    <span>182****6061</span><br/>
+                                    <span>已绑定手机</span>&emsp;<button class="btn d" onclick="showBox('.change-phone-box')">更改</button>
+                                </div>
+                                <div class="col-md-2" style="margin-left:30px;">
+                                    <span>未绑定</span><br/>
+                                    <span>已绑定微信</span>&emsp;<button class="btn d" onclick="showBox('.band-wechat-box')">绑定</button>
+                                </div>
+                                <div class="col-md-2" style="margin-left:30px;">
+                                    <span>1**4</span><br/>
+                                    <span>服务授权码</span>&emsp;<button class="btn d">设置</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <div class="row tableTitle">
+                                <button class="btn btn-link table-tle-btn tableTitleActive" data-num="1">基本信息</button>
+                                <button class="btn btn-link table-tle-btn" data-num="2">联系信息</button>
+                                <button class="btn btn-link table-tle-btn" data-num="3">客户经理</button>
+                            </div>
+                            <div class="row row1">
+                                <div class="col-sm-11" style="margin: 20px 0 0 25px;"><span class="itemTitle">基本信息</span></div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>用户信息：</span>
+                                    <span>个人用户</span>
+                                    <br/>
+                                    <br/>
+                                    <span>用户电话：</span>
+                                    <span class="basicmsg">12345678910</span>
+                                    <input class="basicmsg" type="text" value="12345678910">
+                                </div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>用户名称：</span>
+                                    <span>xxx</span>
+                                    <br/>
+                                    <br/>
+                                    <span>邮政编码：</span>
+                                    <span class="basicmsg">123456</span>
+                                    <input class="basicmsg" type="text" value="123456">
+                                </div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>公司地址：</span>
+                                    <span class="basicmsg">————</span>
+                                    <input class="basicmsg" type="text" value="————">
+                                    <br/>
+                                    <br/>
+                                    <span>传真号码：</span>
+                                    <span class="basicmsg">021-12345678</span>
+                                    <input class="basicmsg" type="text" value="021-12345678">
+                                </div>
+
+                                <div class="col-sm-11" style="margin: 20px 0 0 25px;"><span class="itemTitle">业务信息</span></div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>主要行业应用：</span>
+                                    <span class="basicmsg">————</span>
+                                    <input class="basicmsg" type="text" value="————">
+                                </div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>主营业务：</span>
+                                    <span class="basicmsg">————</span>
+                                    <input class="basicmsg" type="text" value="————">
+                                </div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>网络地址：</span>
+                                    <span class="basicmsg">xxxx*xxx*x</span>
+                                    <input class="basicmsg" type="text" value="xxxx*xxx*x">
+                                </div>
+                                <div class="col-sm-11 row1-update-btn-box" style="margin: 20px 0 0 25px;">
+                                    <button class="btn btn-primary btn-outline" onclick="row1update();">修改</button>
+                                </div>
+                                <div class="col-sm-11 row1-save-btn-box" style="margin: 20px 0 0 25px;">
+                                    <button class="btn btn-primary btn-outline" onclick="row1save();">保存</button>
+                                    <button class="btn btn-outline btn-default" onclick="row1close();">取消</button>
+                                </div>
+                            </div>
+
+                            <div class="row row2" style="display: none;">
+                                <div class="col-sm-11" style="margin: 20px 0 0 25px;">
+                                    <button class="btn btn-primary btn-outline" type="button">+&nbsp;新建联系人</button>
+                                    <button class="btn btn-primary btn-outline" type="button"> <i class="fa fa-refresh"></i> &nbsp;刷新</button>
+                                    <button class="btn btn-primary btn-outline" type="button"> <i class="fa fa-pencil-square-o"></i> &nbsp;修改</button>
+                                    <button class="btn btn-primary btn-outline" type="button"> <i class="fa fa-trash-o"></i> &nbsp;删除</button>
+                                </div>
+                                <div class="col-sm-11" style="margin:25px 0 0 10px;">
+                                    <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox"/>
+                                                    姓名
+                                                </th>
+                                                <th>固定电话</th>
+                                                <th>手机</th>
+                                                <th>联系邮箱</th>
+                                                <th>产品型号</th>
+                                                <th>证件类型</th>
+                                                <th>证件号</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox"/>
+                                                    Trident
+                                                </td>
+                                                <td>Internet Explorer 4.0
+                                                </td>
+                                                <td>Win 95+</td>
+                                                <td class="center">4</td>
+                                                <td class="center">X</td>
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 4.0
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <ul class="pagination pull-right"></ul>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <div class="col-sm-11">
+                                        <p>
+                                            <span style="color: red;">提示：</span>
+                                            <br/>
+                                            选中联系人，点击“修改”对联系人进行基本修改以及证件照片上传。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row row3" style="display: none;">
+                                <div class="col-sm-11" style="margin: 20px 0 0 25px;"><span class="itemTitle">基本信息</span></div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>用户信息：</span>
+                                    <span>个人用户</span>
+                                    <br/>
+                                    <br/>
+                                    <span>用户电话：</span>
+                                    <span>12345678910</span>
+                                </div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>用户名称：</span>
+                                    <span>xxx</span>
+                                    <br/>
+                                    <br/>
+                                    <span>邮政编码：</span>
+                                    <span>123456</span>
+                                </div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>公司地址：</span>
+                                    <span>————</span>
+                                    <br/>
+                                    <br/>
+                                    <span>传真号码：</span>
+                                    <span>021-12345678</span>
+                                </div>
+
+                                <div class="col-sm-11" style="margin: 20px 0 0 25px;"><span class="itemTitle">业务信息</span></div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>主要行业应用：</span>
+                                    <span>————</span>
+                                </div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>主营业务：</span>
+                                    <span>xxxx*xxx*x</span>
+                                </div>
+                                <div class="col-sm-3" style="margin: 20px 0 0 25px;">
+                                    <span>网络地址：</span>
+                                    <span>————</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="zz"></div>
+        <div class="update-pwd-box">
+            <div class="title">
+                <span>修改密码</span>
+                <i class="fa fa-times" onclick="closeBox('.update-pwd-box');"></i>
+            </div>
+            <div class="up-c-box">
+                <div class="up-row-item">
+                    <label>账号：</label>
+                    <input type="text" class="phone-code" placeholder="123456489@qq.com"/>
+                </div>
+                <div class="up-row-item">
+                    <label><span class="zd"></span>新密码：</label>
+                    <input type="text" class="phone-code" placeholder="密码至少8位，并包含大小写字母及数字"/>
+                </div>
+                <div class="up-row-item">
+                    <label><span class="zd"></span>确定新密码：</label>
+                    <input type="text" class="phone-code" placeholder="请再次输入密码"/>
+                </div>
+                <div class="up-row-item">
+                    <label></label>
+                    <input type="checkbox" id="is-show-pwd"/>
+                    <label for="is-show-pwd" style="text-align: left;">显示密码</label>
+                </div>
+                <div class="up-row-item">
+                    <label>手机号码：</label>
+                    <input type="text" placeholder="86-12345678910" />
+                    <span class="getcode">获取验证码</span>
+                </div>
+                <div class="up-row-item">
+                    <label><span class="zd"></span>验证码：</label>
+                    <input type="text" class="phone-code" placeholder="请输入验证码" oninput="submitBtnChange(this,'.update-pwd-box .submit-btn');" />
+                </div>
+            </div>
+            <div class="up-btn-box">
+                <input type="button" value="提交" class="submit-btn" />
+                <input type="button" value="取消" onclick="closeBox('.update-pwd-box');" />
+            </div>
+        </div>
+        <div class="change-phone-box">
+            <div class="title">
+                <span>更换手机</span>
+                <i class="close-cp-box fa fa-times" onclick="closeBox('.change-phone-box');"></i>
+            </div>
+            <div class="cp-c-box">
+                <p><span>提示：</span>若原手机号码丢失或停用，请咨询在线客服</p>
+                <div class="cp-row-item">
+                    <label>手机号码：</label>
+                    <input type="text" placeholder="86-12345678910" />
+                    <span class="getcode">获取验证码</span>
+                </div>
+                <div class="cp-row-item">
+                    <label><span class="zd"></span>验证码：</label>
+                    <input type="text" class="phone-code" placeholder="请输入验证码" oninput="submitBtnChange(this,'.change-phone-box .submit-btn');" />
+                </div>
+            </div>
+            <div class="cp-btn-box">
+                <input type="button" value="提交" class="submit-btn" />
+                <input type="button" value="取消" onclick="closeBox('.change-phone-box');" />
+            </div>
+        </div>
+        <div class="band-wechat-box">
+            <div class="title">
+                <span>绑定微信</span>
+                <i class="close-bw-btn fa fa-times" onclick="closeBox('.band-wechat-box');"></i>
+            </div>
+            <div class="bw-c-box">
+                <img src=""/>
+            </div>
+        </div>
+    <!-- 全局js -->
+    <script src="../js/jquery.min.js?v=2.1.4"></script>
+    <script src="../js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../js/plugins/footable/footable.all.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.footable').footable();
+            $(".footable-sort-indicator").remove();
+            $(".row1 input.basicmsg,.row1-save-btn-box").hide();
+            var renum = 1;
+            $(".table-tle-btn").click(function(){
+                $(".table-tle-btn").removeClass("tableTitleActive");
+                $(this).addClass("tableTitleActive");
+                var num = $(this).attr("data-num");
+                if(num != renum){
+                    var renumc = ".row"+renum;
+                    var numc = ".row"+num;
+                    $(renumc).hide();
+                    $(numc).show();
+                    renum = num;
+                }
+            });
+        });
+
+        function showBox(tag){
+            $(".zz").slideDown(100);
+            $(tag).slideDown(300);
+        }
+        function closeBox(tag){
+            $(".zz").slideUp(100);
+            $(tag).slideUp(100);
+        }
+        function submitBtnChange(tag,btn){
+            var reg = /^[0-9]{6}$/;
+            var phoneCode = $(tag).val();
+            if(reg.test(phoneCode)){
+                $(btn).addClass("ok");
+            }else{
+                $(btn).removeClass("ok");
+            }
+        }
+        function row1update(){
+            $(".row1 span.basicmsg,.row1-update-btn-box").hide();
+            $(".row1 input.basicmsg,.row1-save-btn-box").show();
+        }
+        function row1save(){
+            $(".row1 span.basicmsg,.row1-update-btn-box").show();
+            $(".row1 input.basicmsg,.row1-save-btn-box").hide();
+        }
+        function row1close(){
+            $(".row1 span.basicmsg,.row1-update-btn-box").show();
+            $(".row1 input.basicmsg,.row1-save-btn-box").hide();
+        }
+    </script>
+
+</body>
+
+</html>
